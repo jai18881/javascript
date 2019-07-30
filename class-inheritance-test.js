@@ -44,10 +44,12 @@ class Square extends Rectangle {
     }
 }
 
+const shape = new Shape();
 const circle = new Circle(5);
 const rectangle = new Rectangle(10, 5);
 const square = new Square(6);
 
+console.log(`${shape.getName()}: ${shape.area()}`);
 console.log(`${circle.getName()}: ${circle.area()}`);
 console.log(`${rectangle.getName()}: ${rectangle.area()}`);
 console.log(`${square.getName()}: ${square.area()}`);
