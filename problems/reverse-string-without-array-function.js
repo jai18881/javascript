@@ -11,7 +11,7 @@ function reverseStrSubStr(str) {
 
 function reverseStrSlice(str) {
     if(str.length === 0) return '';
-    return str.slice(-1) + reverseStrSlice(str.slice(0, str.length - 1));
+    return str.slice(-1) + reverseStrSlice(str.slice(0, -1));
 }
 
 console.log(reverseStrSubStr(str));
