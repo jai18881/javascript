@@ -9,4 +9,15 @@ const testAsyncAwait = async () => {
     }
 }
 
-testAsyncAwait().then((res) => { console.log('test :', res); return res; }).then((res) => console.log('test1 :', res));
+// testAsyncAwait().then((res) => { console.log('test :', res); return res; }).then((res) => console.log('test1 :', res));
+
+async function anotherFunction() {
+	console.log('anotherFunction waiting......');
+	await testAsyncAwait();
+	console.log('anotherFunction waited......');
+	await testAsyncAwait();
+}
+
+anotherFunction().then(() => {
+	console.log('more wait');
+});
